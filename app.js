@@ -1,13 +1,20 @@
+const hourContainer = document.querySelector('.hour-container');
+const minutesContainer = document.querySelector('.minutes-container');
+const secondsContainer = document.querySelector('.seconds-container');
 
-function StudentAverage (math, history, biology, geography) {
-	this.math = math,
-	this.history = history,
-	this.biology = biology,
-	this.geography = geography,
-	this.getAverage = () => {
-		console.log((this.math + this.history + this.biology + this.geography) / 4);
-	}
+const loadTime = () => {
+	const currentTime = new Date();
+
+	const hour = currentTime.getHours();
+	const minutes = currentTime.getMinutes();
+	const seconds = currentTime.getSeconds();
+	
+	hourContainer.textContent = (hour < 10) ? '0' + hour : hour;
+	minutesContainer.textContent = (minutes < 10) ? '0' + minutes : minutes;
+	secondsContainer.textContent = (seconds < 10) ? '0' + seconds : seconds;
+
 }
 
-const student1 = new StudentAverage(65, 80, 75, 80);
-student1.getAverage(); // Result is 75
+window.addEventListener('DOMContentLoaded', () => {
+	setInterval(loadTime, 1000);
+})
