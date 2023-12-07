@@ -7,22 +7,27 @@
 .main-container {
 	width: 100vw;
 	height: 100vh;
+	background-color: black;
 	display: flex;
 	align-items: center;
 	padding: 4rem;
-	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-family: 'orbitron', sans-serif;
+	font-size: 6rem;
+	color: azure;
 }
 
 .clock-container {
 	width: 50%;
-	height: 50%;
+	height: 40%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	border: 2px solid black;
+	border: 2px solid azure;
+	box-shadow: 0 0 16px orange;
 }
 
 .counter-container {
 	width: 25%;
-	border: 1px solid black;
+	display: flex;
+	justify-content: center;
 }
